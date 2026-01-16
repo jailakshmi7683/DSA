@@ -24,7 +24,7 @@ class Square extends rectangle { // Multilevel Inheritance
         System.out.println("Displays area of Square");
     }
 
-    int side;
+    
     public void area(int side){ //Compile Time Polymorphism
         int Area = side * side;
         System.out.println("Area of Square: " + Area);
