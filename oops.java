@@ -7,7 +7,7 @@ class Shapes {
 }
 
 class rectangle extends Shapes { //Hierachical Inheritance
-
+    @Override
     public void area(){ //Runtime Polymorphism
         System.out.println("Displays area of Rectangle");
     }
@@ -19,7 +19,7 @@ class rectangle extends Shapes { //Hierachical Inheritance
 }
 
 class Square extends rectangle { // Multilevel Inheritance
-
+    @Override
     public void area(){ //Runtime Polymorphism
         System.out.println("Displays area of Square");
     }
@@ -32,7 +32,7 @@ class Square extends rectangle { // Multilevel Inheritance
 }
 
 class Circle extends Shapes { //Hierachical Inheritance
-
+    @Override
     public void area(){ //Runtime Polymorphism
         System.out.println("Displays area of circle");
     }
