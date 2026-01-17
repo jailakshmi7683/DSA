@@ -43,9 +43,10 @@ class CircularLL {
             tail.next=head;
             return;
         }
+        newNode.next=head;
         tail.next=newNode;
         tail=newNode;
-        tail.next=head;
+        
     }
     
     //print-LL
@@ -62,6 +63,15 @@ class CircularLL {
         System.out.println("HEAD");
         
     }
+
+    //for printing LL
+    //System.out.println(head.data+"->");
+    //Node temp=head.next;
+    //while(temp!=head){
+    //    System.out.print(temp.data+"->");
+    //    temp=temp.next;
+    //}
+
     
     //delete-first
     public void deleteFirst(){
@@ -75,8 +85,10 @@ class CircularLL {
             tail=null;
             return;
         }
+        Node temp=head;
         head=head.next;
         tail.next=head;
+        temp.next=null;
     }
     
     //delete-last
@@ -91,12 +103,14 @@ class CircularLL {
             tail=null;
             return;
         }
-        Node temp=head;
-        while(temp.next!=tail){
-            temp=temp.next;
+        Node temp=tail;
+        Node prev=head;
+        while(prev.next!=tail){
+            prev=prev.next;
         }
-        tail=temp;
+        tail=prev;
         tail.next=head;
+        temp.next=null;
     }
     
     public static void main(String[] args) {
